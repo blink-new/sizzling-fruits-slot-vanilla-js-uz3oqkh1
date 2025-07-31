@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizzling Fruits Slot - 3D Premium Casino</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .redirect-container {
+            background: linear-gradient(135deg, #2d1b69, #11998e);
+            border: 3px solid #ffd700;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            0% { box-shadow: 0 0 50px rgba(255, 215, 0, 0.5); }
+            100% { box-shadow: 0 0 70px rgba(255, 215, 0, 0.8); }
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffd700, #ff6b6b, #ffd700);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleShine 3s ease-in-out infinite;
+        }
+        
+        @keyframes titleShine {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .play-btn {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            border: 3px solid #ffd700;
+            border-radius: 15px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 20px 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+        }
+        
+        .features {
+            text-align: left;
+            margin-top: 30px;
+        }
+        
+        .features h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .features li:before {
+            content: "🎰";
+            position: absolute;
+            left: 0;
+        }
+        
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: float 6s linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+    </style>
+    <!-- CRITICAL: DO NOT REMOVE/MODIFY THIS COMMENT OR THE SCRIPT BELOW -->
+    <script src="https://blink.new/auto-engineer.js?projectId=sizzling-fruits-slot-vanilla-js-uz3oqkh1" type="module"></script>
+  </head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="redirect-container">
+        <h1>🎰 Sizzling Fruits Slot 3D 🎰</h1>
+        <p>Experience the ultimate 3D casino slot machine with stunning graphics and premium features!</p>
+        
+        <a href="slot-3d.html" class="play-btn">🎮 PLAY NOW 🎮</a>
+        
+        <div class="features">
+            <h3>🌟 Premium Features:</h3>
+            <ul>
+                <li>Stunning 3D fruit symbols with realistic effects</li>
+                <li>Progressive jackpot system</li>
+                <li>Turbo spin mode for fast-paced action</li>
+                <li>Auto-spin functionality (10/25 spins)</li>
+                <li>Multiple paylines including diagonals</li>
+                <li>Immersive sound effects and animations</li>
+                <li>Mobile-responsive design</li>
+                <li>Particle effects and win celebrations</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            particle.style.background = ['#ffd700', '#ff6b6b', '#4ecdc4', '#45b7d1'][Math.floor(Math.random() * 4)];
+            
+            document.getElementById('particles').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 6000);
+        }
+        
+        // Create particles periodically
+        setInterval(createParticle, 300);
+        
+        // Create initial particles
+        for (let i = 0; i < 10; i++) {
+            setTimeout(createParticle, i * 100);
+        }
+    </script>
+</body>
+</html>
